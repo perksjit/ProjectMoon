@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Moon</title>
+</head>
+<body>
+    <h1>Project Moon</h1>
+    <ul>
+        <li><a href="#" onclick="showCode(1)">Animation Changer</a></li>
+        <li><a href="#" onclick="showCode(2)">Creation Aim Lock</a></li>
+        <!-- Add more code snippet links as needed -->
+        <p style="color: #ff2e7b;" font="Edu SA Beginner"> Welcome to Project Moon Valt Website! This website is where you can purchase any lock. We also have free locks if you want to use one of them. Our locks that you buy comes with **1 free anygame unban if you get banned, 1 free account if you get banned from a da hood game, fast service and fast mods**</p>
+    </ul>
+
+    <div id="projectmoon">
+        <!-- This is where the code snippets will be displayed -->
+    </div>
+
+    <!-- JavaScript to handle the code snippet display and copy-to-clipboard functionality -->
+    <script>
+        const projectmoon = [
+            'loadstring(game:HttpGet("https://gitlab.com/Tsuniox/lua-stuff/-/raw/master/R15GUI.lua"))()',
+            'This a download Link - https://cdn.discordapp.com/attachments/1132535209603117166/1132535513019056158/creation_unleaked.txt ',
+            '',
+            // Add more code snippets here as needed
+        ];
+
+        function showCode(index) {
+            const codeContainer = document.getElementById('codeContainer');
+            codeContainer.innerHTML = `<pre>${projectmoon[index - 1]}</pre>`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add an event listener to each code snippet link to prevent default navigation behavior
+            const codeLinks = document.querySelectorAll('a');
+            codeLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
